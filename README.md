@@ -1,62 +1,69 @@
-# LEARNATHON-4.0
-LEARNATHON 4.0 GIET UNIVERSITY,GUNUPUR-AYUSHMAN SAHU,ABINASH CHOUDHURY & PRIYANSHU SEKHAR NANDA TEAM(SC2)4_TEAM NO.-16
-# 🚗 AI Auto Insurance Fraud Detection System  
+# React + TypeScript + Vite
 
-An **AI-powered fraud detection system** that uses **supervised learning** and a **Random Forest classifier** to detect fraudulent auto insurance claims.  
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 📌 Features  
-✅ Detects fraudulent insurance claims using historical data  
-✅ Implements **Random Forest** for high accuracy  
-✅Implements **Gradient booassting techniques** 
-✅ Handles data preprocessing, feature selection & scaling  
-✅ Provides model evaluation metrics (Accuracy, Precision, Recall, F1-score)  
-✅ Can be integrated into insurance claim processing workflows  
+Currently, two official plugins are available:
 
-## 🛠️ Tech Stack  
-- reactjs
-- Scikit-learn  
-- Python,Pandas, NumPy  
-- Matplotlib / Seaborn for visualization  
-- Jupyter Notebook (for experimentation)  
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 📂 Project Structure  
-├── data/ # Dataset (claims data)
-├── notebooks/ # Jupyter notebooks for EDA & model training
-├── models/ # Saved trained models
-├── fraud_detection.py # Main model training & prediction script
-└── README.md # Project documentation
+## Expanding the ESLint configuration
 
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## 🚀 How It Works  
-1. **Data Preprocessing** – Cleans & prepares insurance claim data  
-2. **Feature Scaling & Selection** – Normalizes features for better model performance  
-3. **Model Training** – Trains a **Random Forest Classifier**  
-4. **Fraud Detection** – Predicts whether a new claim is **Fraudulent** or **Legit**  
-5. **Evaluation** – Generates metrics & visualizations  
+```js
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-## ▶️ Quick Start  
-```bash
-**# Clone this repo
-git clone https://github.com/ayushmansahu1/LEARNATHON-4.0/edit/main/README.md
+      // Remove tseslint.configs.recommended and replace with this
+      ...tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      ...tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      ...tseslint.configs.stylisticTypeChecked,
 
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
-# Install dependencies
-pyhton
-reactjs
-pip install reactjs
-pip install npm
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-📊 Example Output
-Accuracy: ~95%
-
-Precision/Recall: Balanced for fraud cases
-
-Feature Importance: Highlights key claim factors
-
-🔮 Future Enhancements
-Deploy as a REST API
-
-Add Explainable AI (XAI) for decision transparency
-
-Integrate with live insurance systems**
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
