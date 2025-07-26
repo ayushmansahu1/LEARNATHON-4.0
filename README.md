@@ -10,7 +10,7 @@ An **AI-powered fraud detection system** that uses **supervised learning** and a
 ✅ Can be integrated into insurance claim processing workflows  
 
 ## 🛠️ Tech Stack  
-- Flash
+- Flask
 - Vite
 - Reactjs
 - Scikit-learn  
