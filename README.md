@@ -39,14 +39,14 @@ An **AI-powered fraud detection system** that uses **supervised learning** and a
 **# Clone this repo
 git clone https://github.com/ayushmansahu1/LEARNATHON-4.0/edit/main/README.md
 
-# Navigate into the folder
-cd auto-fraud-detection
 
 # Install dependencies
-pip install -r requirements.txt
+pyhton
+reactjs
+pip install reactjs
+pip install npm
 
-# Run training script
-python fraud_detection.py
+
 📊 Example Output
 Accuracy: ~95%
 
