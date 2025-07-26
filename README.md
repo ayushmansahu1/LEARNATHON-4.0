@@ -35,7 +35,7 @@ An **AI-powered fraud detection system** that uses **supervised learning** and a
 ## ▶️ Quick Start  
 ```bash
 # Clone this repo
-git clone https://github.com/your-username/auto-fraud-detection.git](https://github.com/ayushmansahu1/LEARNATHON-4.0/edit/main/README.md
+git clone [https://github.com/your-username/auto-fraud-detection.git](https://github.com/ayushmansahu1/LEARNATHON-4.0/edit/main/README.md](https://github.com/ayushmansahu1/LEARNATHON-4.0)
 
 
 
